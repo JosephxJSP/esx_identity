@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  user-select: none;
+  overflow: hidden;
+}
+
+/* ============================================================================================================ */
+
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 410px;
+  width: 653px;
+  border-radius: 40px;
+  background: linear-gradient(180deg, #3994ff 0%, #302f7c 100%);
+  border-radius: 40px;
+  transform: scale(0);
+}
+
+.main.fadein { animation: zoom 0.5s ease 0s 1 normal forwards; }
+.main.fadeout { animation: zoom_out 0.5s ease 0s 1 normal forwards; }
+
+.main-in {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 401px;
+  width: 644px;
+  border-radius: 40px;
+  background: #393a42;
+}
+
+.logo {
+  position: absolute;
+  top: -23%;
+  width: 244px;
+  height: 138px;
+  background-image: url(https://cdn.discordapp.com/attachments/1084486015386931255/1105144465838067782/image.png);
+  background-size: cover;
+}
+
+.submit {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -5.5%;
+  width: 280px;
+  height: 47px;
+  background: linear-gradient(180deg, #3994ff 0%, #302f7c 100%);
+  border-radius: 35px;
+  color: #eeeeee;
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  transition: 0.1s;
+  -webkit-filter: brightness(0.5);
+  filter: brightness(0.5);
+}
+
+.select:hover {
+  transition: 0.1s;
+  -webkit-filter: brightness(0.5);
+  filter: brightness(0.5);
+}
+
+.submit:active {
+  transition: 0.1s;
+  scale: 0.97;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.icon-head {
+  width: 50px;
+  height: 50px;
+  background-image: url(https://cdn.discordapp.com/attachments/1084486015386931255/1105148339193921696/image.png);
+  background-size: cover;
+  margin-right: 15px;
+}
+
+.head span {
+  color: #eeeeee;
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.info {
+  display: flex;
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  margin-top: 3px;
+}
+
+.set {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-top: 40px;
+  width: 623px;
+  height: 125px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 280px;
+  height: 40px;
+  background: #303035;
+  border-radius: 35px;
+  margin: 0rem 0.8rem;
+}
+
+.box > .icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.box > .icon > .fa-circle-check {
+  display: none;
+  color: #42ff42;
+}
+
+.box > .icon > .fa-circle-xmark {
+  display: none;
+  color: #ff4141;
+}
+
+.box-cir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: #515361;
+  border-radius: 50%;
+  margin-left: 3px;
+}
+
+.box-logo {
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+}
+
+input[type="text"], input[type="number"], input[type="date"] {
+  width: 75%;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  background: none;
+  margin-left: 20px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 2px;
+  opacity: 0.6;
+  filter: invert(0.8);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.set2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 80px;
+  margin-top: 7px;
+}
+
+.female,
+.male {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sex-img {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+}
+
+input[type="radio"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  background: #eeeeee;
+  margin-top: 9px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #3994ff;
+}
+
+.warning {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: -20%;
+  width: 442px;
+  height: 40px;
+  background: #303035;
+  border-radius: 35px;
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  padding-right: 25px;
+}
+
+.warning-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: #515361;
+  border-radius: 50%;
+  margin-left: 3px;
+}
+
+.w-logo {
+  width: 20px;
+  height: 20px;
+  background-image: url(https://cdn.discordapp.com/attachments/1084486015386931255/1109468707857629204/image.png);
+  background-size: 100%;
+}
+
+/* ============================================================================================================ */
+/* ================================================= KEYFRAME ================================================= */
+/* ============================================================================================================ */
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom_out {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes top {
+  0% {
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
